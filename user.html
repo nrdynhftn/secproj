@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block title %}Menu{% endblock %}
+{% block content %}
+
+<br>
+{% if 'username' in session %}
+<div class="alert alert-success alert-dismissible">
+<!--    <button type="button" class="close" data-dismiss="alert">&times;</button>-->
+    Successfully logged into {{ session.pop('username', None) }} account!
+</div>
+{% endif %}
+
+	    <!-- Cart -->
+    <div class="menu">
+      <h2 class="cart-title">Menu</h2>
+      <!-- Content -->
+      <div class="cart-content">
+
+
+      </div>
+    </div>
+
+{% endblock %}
+

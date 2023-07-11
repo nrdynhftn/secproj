@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>{% block title %}{% endblock %}</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+	<body class="loggedin">
+		<nav class="navtop">
+			<div>
+				<h1>PIZZARIA <3</h1>
+<!--                <a href="{{ url_for('home') }}"><i class="fas fa-home"></i>Home</a>-->
+                <a href="{{ url_for('home') }}"><i class="fas fa-bars"></i>Menu</a>
+				<a href="{{ url_for('register') }}"><i class='fas fa-user-plus'></i>Register</a>
+				<a href="{{ url_for('login') }}"> <i class='fas fa-sign-in-alt'></i>Login</a>
+				<a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i>Logout</a>
+			</div>
+		</nav>
+
+<!--		<section class="shop container">-->
+<!--		  <h2 class="section-title">Menu</h2>-->
+<!--		  &lt;!&ndash; Content &ndash;&gt;-->
+<!--		  <div class="shop-content">-->
+<!--			&lt;!&ndash; Box 1 &ndash;&gt;-->
+<!--			<div class="product-box">-->
+<!--			  <img src="images/b1.jpg" alt="" class="product-img">-->
+<!--			  <h2 class="product-title">BROWNIES</h2>-->
+<!--			  <h3 class="price">$30.00</h3>-->
+<!--			  <i class="fa-solid fa-cart-shopping add-cart" width="30px" height="30px"></i>-->
+<!--			  <a class="desc" href="brownies.html" target="_blank">Description</a>-->
+<!--			</div>-->
+<!--			&lt;!&ndash; Box 2 &ndash;&gt;-->
+<!--			<div class="product-box">-->
+<!--			  <img src="images/f1.jpg" alt="" class="product-img">-->
+<!--			  <h2 class="product-title">FRUIT TART</h2>-->
+<!--			  <h3 class="price">$30.00</h3>-->
+<!--			  <i class="fa-solid fa-cart-shopping add-cart" width="30px" height="30px"></i>-->
+<!--			  <a class="desc" href="fruit-tart.html" target="_blank">Description</a>-->
+<!--			</div>-->
+<!--			&lt;!&ndash; Box 3 &ndash;&gt;-->
+<!--			<div class="product-box">-->
+<!--			  <img src="images/m1.jpg" alt="" class="product-img">-->
+<!--			  <h2 class="product-title">MARBLE CAKE</h2>-->
+<!--			  <h3 class="price">$25.90</h3>-->
+<!--			  <i class="fa-solid fa-cart-shopping add-cart" width="30px" height="30px"></i>-->
+<!--			  <a class="desc" href="marble-cake.html" target="_blank">Description</a>-->
+<!--			</div>-->
+<!--			  &lt;!&ndash; Box 3 &ndash;&gt;-->
+<!--			<div class="product-box">-->
+<!--			  <img src="images/m1.jpg" alt="" class="product-img">-->
+<!--			  <h2 class="product-title">MARBLE CAKE</h2>-->
+<!--			  <h3 class="price">$25.90</h3>-->
+<!--			  <i class="fa-solid fa-cart-shopping add-cart" width="30px" height="30px"></i>-->
+<!--			  <a class="desc" href="marble-cake.html" target="_blank">Description</a>-->
+<!--			</div>-->
+<!--		<section>-->
+
+        <div class="content">
+			{% block content %}{% endblock %}
+        </div>
+		<div class="copyright">
+			<hr><br>
+			<p>&copy; 2023 Pizzaria</p>
+      	</div>
+	</body>
+</html>
